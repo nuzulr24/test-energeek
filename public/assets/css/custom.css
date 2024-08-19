@@ -1,0 +1,113 @@
+.date-input {
+	display: inline-block;
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1;
+	width: 1;
+	margin: -1;
+	padding: 0;
+}
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: var(--icon-size);
+	color: rgb(var(--primary-color));
+	border-radius: 2rem;
+	border: 1px solid rgb(var(--primary-color));
+	padding: 0.8rem;
+	overflow: hidden;
+}
+.icon-booked {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: var(--icon-size);
+	color: var(--bs-text-dark);
+	background: var(--bs-text-gray-400);
+	border-radius: 2rem;
+	padding: 0.8rem;
+	overflow: hidden;
+}
+.icon:hover {
+	cursor: pointer;
+	background-color: rgba(var(--primary-color), 0.1);
+}
+.peer:checked ~ .icon {
+    background-color: rgba(var(--primary-color), 0.2);
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calendar-header .btn {
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+}
+.calendar-header .btn:focus {
+    box-shadow: none;
+}
+.calendar-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.calendar-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 15px;
+}
+.calendar-dates .date {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    width: 60px;
+    background-color: #fff;
+}
+.calendar-dates .date.active {
+    background-color: var(--bs-stepper-icon-number-color);
+    color: #fff;
+}
+.calendar-dates .date:hover {
+    background-color: #f0f0f0;
+}
+.calendar-dates .day-name {
+    font-size: 0.875rem;
+}
+@media (max-width: 576px) {
+    .calendar-dates {
+        padding: 0 5px;
+    }
+    .calendar-dates .date {
+        width: 50px;
+        padding: 3px;
+    }
+    .calendar-dates .day-name {
+        font-size: 0.75rem;
+    }
+}
+
+/* Shimmering animation */
+.shimmer {
+    background: linear-gradient(to right, #eeeeee 0%, #f7f7f7 50%, #eeeeee 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2.7s infinite;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px !important;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
